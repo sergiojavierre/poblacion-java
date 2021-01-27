@@ -5,26 +5,9 @@ import com.piramide.entities.Ciudadano;
 
 import java.util.Scanner;
 
-public class Menu {
+public class MenuCiudadanos extends MenuGenerico{
 
-    public static void menuPrincipal(){
-        while (true){
-            System.out.print("1) Registro\n2) Búsqueda\nOtro) Salida\nOpción: ");
-            Scanner scanner = new Scanner(System.in);
-            int opcion = Integer.parseInt(scanner.nextLine());
-            if(opcion==1){
-                menuRegistroCiudadanos();
-            }
-            else if(opcion == 2){
-                menuBusquedaCiudadanos();
-            }
-            else{
-                return;
-            }
-        }
-    }
-
-    private static void menuRegistroCiudadanos(){
+    public void registra(){
         System.out.println("Registro de ciudadanos:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserta DNI: ");
@@ -37,7 +20,7 @@ public class Menu {
         DAOFactory.getInstance().getDaoCiudadanos().registra(ciudadano);
     }
 
-    private static void menuBusquedaCiudadanos(){
+    public void busca(){
         System.out.println("Búsqueda de ciudadanos:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserta el DNI a buscar: ");

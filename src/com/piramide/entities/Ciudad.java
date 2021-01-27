@@ -25,4 +25,11 @@ public class Ciudad {
         return ciudadanos;
     }
 
+    @Override
+    public String toString() {
+        return "Ciudad{" +
+                "nombre='" + nombre + '\'' +
+                ", ciudadanos=" + ciudadanos +
+                '}';
+    }
 }

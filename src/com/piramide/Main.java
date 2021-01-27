@@ -1,20 +1,19 @@
 package com.piramide;
 
 
-import com.piramide.dao.DAOFactory;
-import com.piramide.entities.Ciudad;
-import com.piramide.ui.Menu;
+import com.piramide.ui.MenuCiudadanos;
+import com.piramide.ui.MenuCiudades;
 
 public class Main {
 
     public static void main(String[] args) {
+/*
+        MenuCiudadanos menuCiudadanos = new MenuCiudadanos();
+        menuCiudadanos.muestra();
 
-        //Menu.menuPrincipal();
+ */
 
-        Ciudad ciudadHuesca = new Ciudad("Huesca");
-        Ciudad ciudadHuesca2 = new Ciudad("Huesca");
-        DAOFactory.getInstance().getDaoCiudades().registra(ciudadHuesca);
-        DAOFactory.getInstance().getDaoCiudades().registra(ciudadHuesca2);
-
+        MenuCiudades menuCiudades = new MenuCiudades();
+        menuCiudades.muestra();
     }
 }
