@@ -14,6 +14,9 @@ public class DAOCiudadanosRAM implements DAOCiudadanos{
 
     @Override
     public void registra(Ciudadano ciudadano) {
-        poblacion.put(ciudadano.getDNI(),ciudadano);
+        if(poblacion.containsKey(ciudadano.getDNI())){
+            System.out.println("Ya existe un ciudadano con DNI "+ciudadano.getDNI());
+        }
+        else poblacion.put(ciudadano.getDNI(),ciudadano);
     }
 }
