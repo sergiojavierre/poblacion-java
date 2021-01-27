@@ -1,5 +1,6 @@
 package com.piramide.ui;
 
+import com.piramide.dao.DAOFactory;
 import com.piramide.entities.Ciudadano;
 
 import java.util.Scanner;
@@ -15,6 +16,7 @@ public class Menu {
         System.out.print("Inserta apellidos: ");
         String apellidos = scanner.nextLine();
         Ciudadano ciudadano = new Ciudadano(DNI,nombre,apellidos);
+        DAOFactory.getInstance().getDaoCiudadanos().registra(ciudadano);
     }
 
 }
