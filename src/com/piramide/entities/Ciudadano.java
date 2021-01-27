@@ -42,4 +42,15 @@ public class Ciudadano {
     public List<Ciudadano> getDescendientes() {
         return descendientes;
     }
+
+    @Override
+    public String toString() {
+        return "Ciudadano{" +
+                "DNI='" + DNI + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", progenitores=" + progenitores +
+                ", descendientes=" + descendientes +
+                '}';
+    }
 }

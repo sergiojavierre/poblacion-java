@@ -19,4 +19,9 @@ public class DAOCiudadanosRAM implements DAOCiudadanos{
         }
         else poblacion.put(ciudadano.getDNI(),ciudadano);
     }
+
+    @Override
+    public Ciudadano busca(String DNI) {
+        return poblacion.get(DNI);
+    }
 }

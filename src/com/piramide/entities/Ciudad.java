@@ -24,4 +24,5 @@ public class Ciudad {
     public List<Ciudadano> getCiudadanos() {
         return ciudadanos;
     }
+
 }
